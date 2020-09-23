@@ -36,7 +36,7 @@ git rebase -i <Commit vor den zu bearbeitenden>
 git rebase -i --onto=origin/<Base> <Commit vor dem ältesten zu rebasenden>
 ```
 
-## git rebase branch ab den letzten Mergpunkt
+## git rebase branch ab den letzten Mergpunkt.
 ```bash 
 git rebase -i --onto=origin/<branch-to-rebase-with> $(git merge-base <actual-local-branch> <branch-to-rebase-with>)
 ```
