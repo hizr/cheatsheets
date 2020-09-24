@@ -1,0 +1,34 @@
+﻿# VC
+.git/
+.svn/
+
+# IDE
+.vscode/
+.idea/
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+*.iml
+
+# Backend
+~$*.xlsx
+*.class
+target/
+test-output/
+
+# Frontend (Angular)
+node_modules/
+package-lock.json
+out-tsc/
+
+# Untracked files and directories
+*.bak
+*.log
+*.orig
+*.versionsbackup
+logs/
+
+# SoapUI-Mocks der Webservice-Schnittstellen (für CI, Entwickler-Betrieb bei SVI-Webservice-Ausfall)
+/soapui-war/*

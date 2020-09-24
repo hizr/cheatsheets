@@ -1,0 +1,48 @@
+[core]
+	editor = code --wait
+
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[user]
+	name = hizr
+	email = heizerlein@gmail.com
+	
+[pull]
+	rebase = true
+
+[mergetool]
+	prompt = false
+	keepBackup = false
+	keepTemporaries = false
+	
+[merge]
+	tool = meld
+
+[mergetool "meld"]
+	path = "/c/developer/tools/meld/Meld.exe"
+
+[mergetool "winmerge"]
+	name = WinMerge
+	trustExitCode = true
+	cmd = "/c/developer/tools/winmerge/WinMergeU.exe" -u -e -dl \"Local\" -dr \"Remote\" $LOCAL $REMOTE $MERGED
+
+[diff]
+	tool = meld
+
+[difftool "meld"]
+	path = "/c/developer/tools/meld/Meld.exe"
+	
+[difftool "winmerge"]
+	name = WinMerge
+	trustExitCode = true
+	cmd = "/c/developer/tools/winmerge/WinMergeU.exe" -u -e $LOCAL $REMOTE
+[alias]
+	co = checkout
+	br = branch
+	ci = commit
+	st = status
+	last = "!f() { git log -$1 HEAD; }; f"
+	daily = !clear && git log --since '1 day ago' --no-merges --pretty=format':%C(yellow)%h %aN%n %B%n' --author 'hizr'
