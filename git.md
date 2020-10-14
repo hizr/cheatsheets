@@ -41,6 +41,9 @@ git rebase -i --onto=origin/<Base> <Commit vor dem ältesten zu rebasenden>
 git rebase -i --onto=origin/<branch-to-rebase-with> $(git merge-base <actual-local-branch> <branch-to-rebase-with>)
 ```
 
+## Squashing
+[So funktionierts...](https://www.internalpointers.com/post/squash-commits-into-one-git)
+
 # Log
 ## get all log messages since (HEAD~#) # = count commits back
 ```bash
