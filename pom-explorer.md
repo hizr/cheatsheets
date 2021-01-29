@@ -1,5 +1,5 @@
 # POM Explorer
 ## Analysiere eine Projekt
 ```bash
-analyze directory c:\developer-moma\projects\asdf\app\
+analyze directory c:\developer\projects\asdf\app\
 ```
