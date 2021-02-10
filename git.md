@@ -49,3 +49,10 @@ git rebase -i --onto=origin/<branch-to-rebase-with> $(git merge-base <actual-loc
 ```bash
 git log --format=%B HEAD~2..HEAD | uniq | grep -v '^$'
  ```
+
+## Tagging
+Add and Push annotated Tag
+```bash
+git tag -a tagname -m "commit msg"
+git push origin tagname
+```
