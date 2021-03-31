@@ -25,6 +25,12 @@ git reset --soft HEAD~3 && git commit --edit -m"$(git log --format=%B --reverse 
 git reset --soft HEAD~3
 ```
 
+# Restore
+## restore einer File auf einen konkreten commit
+```bash
+git restore --source=<Commit-like> <Dateipfad>
+```
+
 # Rebase
 ## git rebase bis zum letzten commit (sqash) (pre-remote)
 ```bash
