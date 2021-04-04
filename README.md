@@ -1,3 +1,3 @@
-# heizer's cheatsheets
+# hizr's cheatsheets
 
-My Cheatsheets i use and create in daily business. Maybe someone else find them usefull.
+My cheat sheets i use and create in daily business. Maybe someone else find them usefull.
