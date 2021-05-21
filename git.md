@@ -7,7 +7,11 @@ git config --global --edit
 ```bash
 git config --global alias.co checkout
 ```
-
+# Remotes
+## add a remote
+```bash
+git remote add origin https://github.com/user/repo.git
+```
 # Commits
 ## git commit ignore post commit hooks like 'husky'
 ```bash
