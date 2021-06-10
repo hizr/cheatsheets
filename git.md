@@ -40,7 +40,7 @@ git restore --source=<Commit-like> <Dateipfad>
 ```
 
 # Rebase
-## git rebase bis zum letzten commit (sqash) (pre-remote)
+## git rebase until last commit (sqash) (pre-remote)
 ```bash
 git rebase -i <Commit vor den zu bearbeitenden>
 ```
@@ -50,13 +50,13 @@ git rebase -i <Commit vor den zu bearbeitenden>
 git rebase -i --onto=origin/<Base> <Commit vor dem ältesten zu rebasenden>
 ```
 
-## git rebase branch ab den letzten Mergpunkt.
+## git rebase branch from the last merge-point.
 ```bash 
 git rebase -i --onto=origin/<branch-to-rebase-with> $(git merge-base <actual-local-branch> <branch-to-rebase-with>)
 ```
 
 ## Squashing
-[So funktionierts...](https://www.internalpointers.com/post/squash-commits-into-one-git)
+[see how it works](https://www.internalpointers.com/post/squash-commits-into-one-git)
 
 # Log
 ## get all log messages since (HEAD~#) # = count commits back
@@ -65,7 +65,7 @@ git log --format=%B HEAD~2..HEAD | uniq | grep -v '^$'
  ```
 
 # Tagging
-Add and Push annotated Tag
+Add and Push annotated tag
 ```bash
 git tag -a tagname -m "commit msg"
 git push origin tagname
