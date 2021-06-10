@@ -18,6 +18,10 @@ git remote add origin https://github.com/user/repo.git
 git commit --no-verify
 ```
 
+# Branches
+## git move branch (renaming)
+[see this answer](https://stackoverflow.com/a/6591218/3073819)
+
 # Resets
 ## squash last 3 commits mit wiederverwendung der commit-message
 ```bash
@@ -60,7 +64,7 @@ git rebase -i --onto=origin/<branch-to-rebase-with> $(git merge-base <actual-loc
 git log --format=%B HEAD~2..HEAD | uniq | grep -v '^$'
  ```
 
-## Tagging
+# Tagging
 Add and Push annotated Tag
 ```bash
 git tag -a tagname -m "commit msg"
