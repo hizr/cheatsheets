@@ -8,7 +8,7 @@
 	required = true
 [user]
 	name = hizr
-	email = heizerlein@gmail.com
+	email = asdqwd@asdad.com
 	
 [pull]
 	rebase = true
@@ -18,27 +18,21 @@
 	keepBackup = false
 	keepTemporaries = false
 	
+[core]
+      editor = code --wait
+
 [merge]
-	tool = meld
+	tool = code
 
-[mergetool "meld"]
-	path = "/c/developer/tools/meld/Meld.exe"
-
-[mergetool "winmerge"]
-	name = WinMerge
-	trustExitCode = true
-	cmd = "/c/developer/tools/winmerge/WinMergeU.exe" -u -e -dl \"Local\" -dr \"Remote\" $LOCAL $REMOTE $MERGED
+[mergetool "code"]
+	cmd = code --wait --merge $REMOTE $LOCAL $BASE $MERGED
 
 [diff]
-	tool = meld
+	tool = code
 
-[difftool "meld"]
-	path = "/c/developer/tools/meld/Meld.exe"
+[difftool "code"]
+	cmd = code --wait --diff $LOCAL $REMOTE
 	
-[difftool "winmerge"]
-	name = WinMerge
-	trustExitCode = true
-	cmd = "/c/developer/tools/winmerge/WinMergeU.exe" -u -e $LOCAL $REMOTE
 [alias]
 	co = checkout
 	br = branch
